@@ -1,12 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:insta_app/Ui/Data.dart';
 import 'InstaHome.dart';
 import 'explore.dart';
-class profile extends StatefulWidget {
-  const profile({Key? key}) : super(key: key);
-  @override
-  State<profile> createState() => _profileState();
+class Profile extends StatefulWidget {
+  final String accountImage ;
+  final String name;
+  final int follow;
+
+  Profile({
+
+   required this.accountImage,
+   required this.name,
+   required this.follow,
+
+
 }
-class _profileState extends State<profile> {
+ );
+
+
+
+
+  @override
+  State<Profile> createState() => _ProfileState();
+}
+class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,10 +65,11 @@ class _profileState extends State<profile> {
                       child: Row(
                         children: [
                           Image.asset(
-                            "images/avatar.png",
+                           "images/avatar.png",
                             height: 80,
                             width: 80,
                           ),
+
                           SizedBox(
                             width: 60,
                           ),
@@ -74,7 +92,7 @@ class _profileState extends State<profile> {
                               ),
                               Column(
                                 children: [
-                                  Text("9,906",
+                                  Text(widget.follow.toString(),
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 20)),
                                   Text("Followers",
@@ -102,7 +120,7 @@ class _profileState extends State<profile> {
                       padding: EdgeInsets.only(left: 20, top: 10, bottom: 5),
                       child: Row(
                         children: [
-                          Text("Aymn Saad Arrak",
+                          Text("Aymn Saad Al-Arrak",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 15,
@@ -308,24 +326,42 @@ class _profileState extends State<profile> {
             ],
           )),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.black,
-        iconSize: 25,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: GestureDetector(
-                child: Icon(Icons.search, color: Colors.white),
+                child: Icon(Icons.home, color: Colors.white),
                 onTap: () {
                   Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => Explore()));
+                      .push(MaterialPageRoute(builder: (context) => InstaHome()));
                 }),
             label: ' ',
           ),
           BottomNavigationBarItem(
             icon: GestureDetector(
-                child: Icon(Icons.home_filled, color: Colors.white),
+                child: Icon(Icons.search_rounded, color: Colors.white),
                 onTap: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => InstaHome()));
+                      MaterialPageRoute(builder: (context) => Explore()));
+                }),
+            label: ' ',
+          ),
+          BottomNavigationBarItem(
+            icon: GestureDetector(
+                child: Icon(Icons.slow_motion_video_rounded, color: Colors.white),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Profile(accountImage:accountImage,follow:follow ,name:name , )));
+                }),
+            label: ' ',
+          ),
+          BottomNavigationBarItem(
+            icon: GestureDetector(
+                child: Icon(Icons.favorite_border, color: Colors.white),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Profile(accountImage:accountImage,follow:follow ,name:name , )));
                 }),
             label: ' ',
           ),
@@ -334,7 +370,7 @@ class _profileState extends State<profile> {
                 child: Icon(Icons.person, color: Colors.white),
                 onTap: () {
                   Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => profile()));
+                      .push(MaterialPageRoute(builder: (context) => Profile(accountImage:accountImage,follow:follow ,name:name , )));
                 }),
             label: ' ',
           ),

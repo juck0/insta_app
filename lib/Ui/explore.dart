@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:insta_app/Ui/Data.dart';
 import 'package:insta_app/Ui/profile.dart';
 import 'InstaHome.dart';
 
@@ -98,24 +99,42 @@ class _ExploreState extends State<Explore> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.black,
-        iconSize: 25,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: GestureDetector(
-                child: Icon(Icons.search, color: Colors.white),
+                child: Icon(Icons.home, color: Colors.white),
                 onTap: () {
                   Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => Explore()));
+                      .push(MaterialPageRoute(builder: (context) => InstaHome()));
                 }),
             label: ' ',
           ),
           BottomNavigationBarItem(
             icon: GestureDetector(
-                child: Icon(Icons.home_filled, color: Colors.white),
+                child: Icon(Icons.search_rounded, color: Colors.white),
                 onTap: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => InstaHome()));
+                      MaterialPageRoute(builder: (context) => Explore()));
+                }),
+            label: ' ',
+          ),
+          BottomNavigationBarItem(
+            icon: GestureDetector(
+                child: Icon(Icons.slow_motion_video_rounded, color: Colors.white),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Profile(accountImage:accountImage,follow:follow ,name:name , )));
+                }),
+            label: ' ',
+          ),
+          BottomNavigationBarItem(
+            icon: GestureDetector(
+                child: Icon(Icons.favorite_border, color: Colors.white),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Profile(accountImage:accountImage,follow:follow ,name:name , )));
                 }),
             label: ' ',
           ),
@@ -124,7 +143,7 @@ class _ExploreState extends State<Explore> {
                 child: Icon(Icons.person, color: Colors.white),
                 onTap: () {
                   Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => profile()));
+                      .push(MaterialPageRoute(builder: (context) => Profile(accountImage:accountImage,follow:follow ,name:name , )));
                 }),
             label: ' ',
           ),

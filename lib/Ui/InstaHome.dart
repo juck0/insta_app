@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:insta_app/Ui/profile.dart';
 import 'explore.dart';
+import 'package:insta_app/Ui/Data.dart';
 class InstaHome extends StatefulWidget {
   const InstaHome({Key? key}) : super(key: key);
   @override
@@ -36,7 +37,7 @@ class _InstaHomeState extends State<InstaHome> {
                 Column(children: [Container(width: 1000,height: 100,child: ListView(
                   scrollDirection: Axis.horizontal,children: [
                   Column(children: [
-                    Image.asset("images/mee.png", width: 70 ,height: 70),
+                    Image.asset("images/avatar.png", width: 70 ,height: 70),
                     SizedBox(height: 5,),
                     Text("Your story",style: TextStyle(color: Colors.white)),
 
@@ -184,198 +185,11 @@ class _InstaHomeState extends State<InstaHome> {
                         ]),)
 
                   ],),
-                  Column(children: [
-                    Row(
-                      children: [
-                        Row(children: [
-
-                          Image.asset("images/asda.jpg",height: 40,width: 40),
-                          SizedBox(width: 5,),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("dnascholarship" ,style: TextStyle(color: Colors.white)),
-                              Text("Zain Co.",style: TextStyle(color: Colors.white ,fontSize: 10))
-                            ],)
-                        ],),SizedBox(width: 200,),
-                        Icon(Icons.more_horiz_outlined,color: Colors.white,),
-                      ],),
-                    SizedBox(height: 5,),
-                    Image.network("https://res.cloudinary.com/startup-grind/image/upload/c_limit,dpr_2,f_auto,g_center,h_1440,q_auto:good,w_2048/v1/gcs/platform-data-goog/event_wrapup/photo_2021-09-20_12-28-25.jpg",fit: BoxFit.cover),
-                    SizedBox(height: 10,),
-                    Padding(padding: EdgeInsets.only(left: 20,right: 20),child:
-                    Row(children: [
-                      Row(children: [
-                        Icon(Icons.favorite_border,color: Colors.white,),
-                        SizedBox(width: 20,),
-                        Image.asset("images/omment_icon.png",width: 25,height: 25,color: Colors.white),
-                        SizedBox(width: 20,),
-                        Icon(Icons.send,color: Colors.white,),
-                      ],),SizedBox(width: 200,),
-
-                      Image.asset("images/saveicon.png",width: 30,height: 30),
-
-                    ],),),SizedBox(height: 10,),
-                    Padding(padding: EdgeInsets.only(left: 20),child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("8,812 likes",style: TextStyle(color: Colors.white)),
-                          SizedBox(height: 5,),
-                          Text("Team Dna visit UOITC ❤😎",style: TextStyle(color: Colors.white),),
-                          Text("View all 67 commernts",style: TextStyle(color: Colors.grey),)
-
-                          ,Row(children: [
-                            Text("8 hours ago .",style: TextStyle(color: Colors.grey)),
-                            Text("See translation",style: TextStyle(color: Colors.white),),
-
-
-                          ],),SizedBox(height: 10,)
-                        ]),)
-
-                  ],),
-                  Column(children: [
-                    Row(
-                      children: [
-                        Row(children: [
-
-                          Image.asset("images/asda.jpg",height: 40,width: 40),
-                          SizedBox(width: 5,),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("dnascholarship" ,style: TextStyle(color: Colors.white)),
-                              Text("Zain Co.",style: TextStyle(color: Colors.white ,fontSize: 10))
-                            ],)
-                        ],),SizedBox(width: 200,),
-                        Icon(Icons.more_horiz_outlined,color: Colors.white,),
-                      ],),
-                    SizedBox(height: 5,),
-                    Image.network("https://res.cloudinary.com/startup-grind/image/upload/c_limit,dpr_2,f_auto,g_center,h_1440,q_auto:good,w_2048/v1/gcs/platform-data-goog/event_wrapup/photo_2021-09-20_12-28-25.jpg",fit: BoxFit.cover),
-                    SizedBox(height: 10,),
-                    Padding(padding: EdgeInsets.only(left: 20,right: 20),child:
-                    Row(children: [
-                      Row(children: [
-                        Icon(Icons.favorite_border,color: Colors.white,),
-                        SizedBox(width: 20,),
-                        Image.asset("images/omment_icon.png",width: 25,height: 25,color: Colors.white),
-                        SizedBox(width: 20,),
-                        Icon(Icons.send,color: Colors.white,),
-                      ],),SizedBox(width: 200,),
-
-                      Image.asset("images/saveicon.png",width: 30,height: 30),
-
-                    ],),),SizedBox(height: 10,),
-                    Padding(padding: EdgeInsets.only(left: 20),child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("8,812 likes",style: TextStyle(color: Colors.white)),
-                          SizedBox(height: 5,),
-                          Text("Team Dna visit UOITC ❤😎",style: TextStyle(color: Colors.white),),
-                          Text("View all 67 commernts",style: TextStyle(color: Colors.grey),)
-
-                          ,Row(children: [
-                            Text("8 hours ago .",style: TextStyle(color: Colors.grey)),
-                            Text("See translation",style: TextStyle(color: Colors.white),),
-
-
-                          ],),SizedBox(height: 10,)
-                        ]),)
-
-                  ],),
-                  Column(children: [
-                    Row(
-                      children: [
-                        Row(children: [
-
-                          Image.asset("images/asda.jpg",height: 40,width: 40),
-                          SizedBox(width: 5,),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("dnascholarship" ,style: TextStyle(color: Colors.white)),
-                              Text("Zain Co.",style: TextStyle(color: Colors.white ,fontSize: 10))
-                            ],)
-                        ],),SizedBox(width: 200,),
-                        Icon(Icons.more_horiz_outlined,color: Colors.white,),
-                      ],),
-                    SizedBox(height: 5,),
-                    Image.network("https://res.cloudinary.com/startup-grind/image/upload/c_limit,dpr_2,f_auto,g_center,h_1440,q_auto:good,w_2048/v1/gcs/platform-data-goog/event_wrapup/photo_2021-09-20_12-28-25.jpg",fit: BoxFit.cover),
-                    SizedBox(height: 10,),
-                    Padding(padding: EdgeInsets.only(left: 20,right: 20),child:
-                    Row(children: [
-                      Row(children: [
-                        Icon(Icons.favorite_border,color: Colors.white,),
-                        SizedBox(width: 20,),
-                        Image.asset("images/omment_icon.png",width: 25,height: 25,color: Colors.white),
-                        SizedBox(width: 20,),
-                        Icon(Icons.send,color: Colors.white,),
-                      ],),SizedBox(width: 200,),
-
-                      Image.asset("images/saveicon.png",width: 30,height: 30),
-
-                    ],),),SizedBox(height: 10,),
-                    Padding(padding: EdgeInsets.only(left: 20),child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("8,812 likes",style: TextStyle(color: Colors.white)),
-                          SizedBox(height: 5,),
-                          Text("Team Dna visit UOITC ❤😎",style: TextStyle(color: Colors.white),),
-                          Text("View all 67 commernts",style: TextStyle(color: Colors.grey),)
-
-                          ,Row(children: [
-                            Text("8 hours ago .",style: TextStyle(color: Colors.grey)),
-                            Text("See translation",style: TextStyle(color: Colors.white),),
-
-
-                          ],),SizedBox(height: 10,)
-                        ]),)
-
-                  ],),
-                  Column(children: [
-                    Row(
-                      children: [
-                        Row(children: [
-
-                          Image.asset("images/asda.jpg",height: 40,width: 40),
-                          SizedBox(width: 5,),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("dnascholarship" ,style: TextStyle(color: Colors.white)),
-                              Text("Zain Co.",style: TextStyle(color: Colors.white ,fontSize: 10))
-                            ],)
-                        ],),SizedBox(width: 200,),
-                        Icon(Icons.more_horiz_outlined,color: Colors.white,),
-                      ],),
-                    SizedBox(height: 5,),
-                    Image.network("https://res.cloudinary.com/startup-grind/image/upload/c_limit,dpr_2,f_auto,g_center,h_1440,q_auto:good,w_2048/v1/gcs/platform-data-goog/event_wrapup/photo_2021-09-20_12-28-25.jpg",fit: BoxFit.cover),
-                    SizedBox(height: 10,),
-                    Padding(padding: EdgeInsets.only(left: 20,right: 20),child:
-                    Row(children: [
-                      Row(children: [
-                        Icon(Icons.favorite_border,color: Colors.white,),
-                        SizedBox(width: 20,),
-                        Image.asset("images/omment_icon.png",width: 25,height: 25,color: Colors.white),
-                        SizedBox(width: 20,),
-                        Icon(Icons.send,color: Colors.white,),
-                      ],),SizedBox(width: 200,),
-
-                      Image.asset("images/saveicon.png",width: 30,height: 30),
-
-                    ],),),SizedBox(height: 10,),
-                    Padding(padding: EdgeInsets.only(left: 20),child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("8,812 likes",style: TextStyle(color: Colors.white)),
-                          SizedBox(height: 5,),
-                          Text("Team Dna visit UOITC ❤😎",style: TextStyle(color: Colors.white),),
-                          Text("View all 67 commernts",style: TextStyle(color: Colors.grey),)
-
-                          ,Row(children: [
-                            Text("8 hours ago .",style: TextStyle(color: Colors.grey)),
-                            Text("See translation",style: TextStyle(color: Colors.white),),
-
-
-                          ],),SizedBox(height: 10,)
-                        ]),)
-
-                  ],),
+                  post(),
+                  post(),
+                  post(),
+                  post(),
+                  post(),
 
                 ],)
               ]),
@@ -383,24 +197,43 @@ class _InstaHomeState extends State<InstaHome> {
 
           )])
       ]),
-      bottomNavigationBar: BottomNavigationBar(        backgroundColor: Colors.black,
-        iconSize: 25,
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.black,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: GestureDetector(
-                child: Icon(Icons.search, color: Colors.white),
+                child: Icon(Icons.home, color: Colors.white),
                 onTap: () {
                   Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => Explore()));
+                      .push(MaterialPageRoute(builder: (context) => InstaHome()));
                 }),
             label: ' ',
           ),
           BottomNavigationBarItem(
             icon: GestureDetector(
-                child: Icon(Icons.home_filled, color: Colors.white),
+                child: Icon(Icons.search_rounded, color: Colors.white),
                 onTap: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => InstaHome()));
+                      MaterialPageRoute(builder: (context) => Explore()));
+                }),
+            label: ' ',
+          ),
+          BottomNavigationBarItem(
+            icon: GestureDetector(
+                child: Icon(Icons.slow_motion_video_rounded, color: Colors.white),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Profile(accountImage:accountImage,follow:follow ,name:name , )));
+                }),
+            label: ' ',
+          ),
+          BottomNavigationBarItem(
+            icon: GestureDetector(
+                child: Icon(Icons.favorite_border, color: Colors.white),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => Profile(accountImage:accountImage,follow:follow ,name:name , )));
                 }),
             label: ' ',
           ),
@@ -409,7 +242,7 @@ class _InstaHomeState extends State<InstaHome> {
                 child: Icon(Icons.person, color: Colors.white),
                 onTap: () {
                   Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => profile()));
+                      .push(MaterialPageRoute(builder: (context) => Profile(accountImage:accountImage,follow:follow ,name:name , )));
                 }),
             label: ' ',
           ),
@@ -417,6 +250,64 @@ class _InstaHomeState extends State<InstaHome> {
         selectedItemColor: Colors.white,
       ),
 
+
     );
+  }
+  Column post(){
+    return Column(children: [
+      Row(
+        children: [
+          Row(children: [
+            GestureDetector(
+              onTap:(){
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) =>Profile(accountImage: accountImage, name: name, follow: follow) ));
+
+            } ,
+              child: Image.asset(accountImage,height: 40,width: 40),
+            ),
+
+            SizedBox(width: 5,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("dnascholarship" ,style: TextStyle(color: Colors.white)),
+                Text("Zain Co.",style: TextStyle(color: Colors.white ,fontSize: 10))
+              ],)
+          ],),SizedBox(width: 200,),
+          Icon(Icons.more_horiz_outlined,color: Colors.white,),
+        ],),
+      SizedBox(height: 5,),
+      Image.network("https://res.cloudinary.com/startup-grind/image/upload/c_limit,dpr_2,f_auto,g_center,h_1440,q_auto:good,w_2048/v1/gcs/platform-data-goog/event_wrapup/photo_2021-09-20_12-28-25.jpg",fit: BoxFit.cover),
+      SizedBox(height: 10,),
+      Padding(padding: EdgeInsets.only(left: 20,right: 20),child:
+      Row(children: [
+        Row(children: [
+          Icon(Icons.favorite_border,color: Colors.white,),
+          SizedBox(width: 20,),
+          Image.asset("images/omment_icon.png",width: 25,height: 25,color: Colors.white),
+          SizedBox(width: 20,),
+          Icon(Icons.send,color: Colors.white,),
+        ],),SizedBox(width: 200,),
+
+        Image.asset("images/saveicon.png",width: 30,height: 30),
+
+      ],),),SizedBox(height: 10,),
+      Padding(padding: EdgeInsets.only(left: 20),child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("8,812 likes",style: TextStyle(color: Colors.white)),
+            SizedBox(height: 5,),
+            Text("Team Dna visit UOITC ❤😎",style: TextStyle(color: Colors.white),),
+            Text("View all 67 commernts",style: TextStyle(color: Colors.grey),)
+
+            ,Row(children: [
+              Text("8 hours ago .",style: TextStyle(color: Colors.grey)),
+              Text("See translation",style: TextStyle(color: Colors.white),),
+
+
+            ],),SizedBox(height: 10,)
+          ]),)
+
+    ],);
   }
 }
